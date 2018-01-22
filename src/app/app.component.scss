@@ -1,0 +1,17 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+.main-body{
+  background: aliceblue;
+}
+
+a{
+  color: white;
+  &:hover{
+    color: red;
+    background: gray;
+  }
+}
+
+.active{
+  background: darkslategrey;
+}

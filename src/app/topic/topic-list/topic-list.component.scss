@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+a{
+  color: whitesmoke;
+  &:hover{
+    color: red;
+  }
+}
+
+.pointer{
+  cursor: pointer;
+}

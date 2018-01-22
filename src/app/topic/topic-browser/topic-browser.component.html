@@ -1,0 +1,19 @@
+<div *ngIf="!isNotShow">
+  <h3>Topic Listing</h3>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-md-8">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" #createTopic placeholder="Create New Topic" aria-label="New Topic" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button (click)="createNewTopic(createTopic.value)" class="btn btn-outline-secondary" type="button">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<router-outlet></router-outlet>

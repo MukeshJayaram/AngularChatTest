@@ -1,0 +1,25 @@
+@import "~bootstrap/scss/bootstrap.scss";
+.chat-window {
+  background: #787f9c;
+  color: white;
+  height: 200px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-top: 8px;
+}
+
+.btn-primary {
+  &:hover {
+    background: red;
+    font-weight: bold;
+  }
+}
+
+.error-msg{
+  color: red;
+  &.hidden{
+    display: none;
+  }
+}

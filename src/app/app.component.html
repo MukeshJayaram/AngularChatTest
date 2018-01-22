@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h3>
+        Angular Topic - Forum
+      </h3>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs|pills navbar-dark bg-dark" id="navId">
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a [routerLink]="['/home']"  class="nav-link" >Home</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a [routerLink]="['/topics']" class="nav-link" >Topics</a>
+        </li>
+      </ul>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+</div>

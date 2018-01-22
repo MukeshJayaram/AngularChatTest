@@ -1,0 +1,34 @@
+<h2>{{ topicDetails.name }}</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="name" id="name"
+          [(ngModel)]="peerName">
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" aria-label="message" aria-describedby="basic-addon2" type="text" #message placeholder="message">
+        <div class="input-group-append">
+          <button [disabled]="!peerName" (click)="sendMessage(message.value)" class="btn btn-outline-secondary" type="button">Send</button>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <span [class.hidden]="peerName" class="error-msg">Please provide a name</span>
+      </div>
+      <button type="button" class="btn btn-primary btn-lg btn-block" (click)="logout()">Logout</button>
+
+    </div>
+    <div class="col-sm-4">
+      <div class="chat-window">
+        <p *ngFor="let message of messageList.slice().reverse()">
+          <span>{{ message }}</span>
+          <br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
